@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Settings schema (KConfigXT). Every entry here becomes
+  Plasmoid.configuration.<name> in QML, and is bound to a
+  `cfg_<name>` property on whichever settings page declares one.
+-->
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name=""/>
+
+  <group name="General">
+    <!-- 0 = analog, 1 = digital, 2 = text -->
+    <entry name="displayMode" type="Int">
+      <default>0</default>
+    </entry>
+    <entry name="showBackground" type="Bool">
+      <default>true</default>
+    </entry>
+    <!-- IANA zone such as "America/New_York"; empty means the system zone -->
+    <entry name="timeZone" type="String">
+      <default></default>
+    </entry>
+    <!-- Colors: empty string means "follow the Plasma theme" -->
+    <entry name="foregroundColor" type="String">
+      <default></default>
+    </entry>
+    <entry name="accentColor" type="String">
+      <default></default>
+    </entry>
+    <!-- Empty string means "theme default font" -->
+    <entry name="fontFamily" type="String">
+      <default></default>
+    </entry>
+  </group>
+
+  <group name="Analog">
+    <!-- Any combination of hands, including a single one -->
+    <entry name="showHourHand" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showMinuteHand" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showSecondHand" type="Bool">
+      <default>false</default>
+    </entry>
+    <!-- Filled circle behind the face, for use without the widget background.
+         dialColor may carry alpha (#aarrggbb); empty = theme background -->
+    <entry name="showDial" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="dialColor" type="String">
+      <default></default>
+    </entry>
+    <entry name="dial24h" type="Bool">
+      <default>false</default>
+    </entry>
+    <!-- Number of tick marks around the dial; 0 hides them -->
+    <entry name="tickCount" type="Int">
+      <default>60</default>
+      <min>0</min>
+      <max>288</max>
+    </entry>
+    <entry name="showNumerals" type="Bool">
+      <default>true</default>
+    </entry>
+  </group>
+
+  <group name="Digital">
+    <!-- Qt date/time format string, e.g. "hh:mm", "h:mm AP", "HH:mm:ss" -->
+    <entry name="timeFormat" type="String">
+      <default>hh:mm</default>
+    </entry>
+    <entry name="showDate" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="dateFormat" type="String">
+      <default>dddd, MMMM d</default>
+    </entry>
+  </group>
+
+  <group name="Text">
+    <!-- 0 = nearest 5 minutes, 1 = nearest quarter hour, 2 = time of day,
+         3 = custom (customPhrases + customStep) -->
+    <entry name="phraseSet" type="Int">
+      <default>0</default>
+    </entry>
+    <!-- Rule text; the format is described in contents/ui/FuzzyTime.js -->
+    <entry name="customPhrases" type="String">
+      <default></default>
+    </entry>
+    <!-- Round the time to this many minutes before matching custom rules -->
+    <entry name="customStep" type="Int">
+      <default>5</default>
+      <min>1</min>
+      <max>60</max>
+    </entry>
+  </group>
+</kcfg>

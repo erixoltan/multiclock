@@ -1,0 +1,5 @@
+*.plasmoid
+.qmlls.ini
+.cache/
+build/
+dist/

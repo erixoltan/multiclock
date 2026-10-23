@@ -1,0 +1,23 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "oss@zoltan.org",
+                "Name": "Erik Zoltan"
+            }
+        ],
+        "Category": "Date and Time",
+        "Description": "A desktop clock with analog, digital and text faces",
+        "Icon": "preferences-system-time",
+        "Id": "com.erikzoltan.multiclock",
+        "License": "GPL-2.0-or-later",
+        "Name": "MultiClock",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ],
+        "Version": "0.2.0",
+        "Website": "https://github.com/erixoltan/multiclock"
+    },
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml"
+}
