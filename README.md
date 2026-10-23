@@ -51,7 +51,7 @@ make uninstall
 
 These targets are for Plasma 6. On Plasma 5.27 use `make install5`, `make test5` and `make uninstall5`.
 
-From the KDE Store: right-click the desktop, *Add Widgets…*, *Get New Widgets…*, and search for MultiClock. Plasma 6 and Plasma 5 each have their own store page.
+From the KDE Store: right-click the desktop, *Add Widgets…*, *Get New Widgets…*, and search for MultiClock. The store page, with both packages: https://store.kde.org/p/2380181
 
 To install a downloaded `.plasmoid` file (from the store or the GitHub releases): `kpackagetool6 -t Plasma/Applet -i multiclock-<version>-plasma6.plasmoid` (Plasma 6) or `kpackagetool5 -t Plasma/Applet -i multiclock-<version>-plasma5.plasmoid` (Plasma 5).
 

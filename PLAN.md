@@ -111,4 +111,4 @@ MultiClock currently lives in the private `~/code` monorepo. To work on another 
 1. ~~Commit, split out into the public repo.~~ Done 2026-10-23: https://github.com/erixoltan/multiclock, via `tools/publish.sh`.
 2. ~~Port to Plasma 6 on the Plasma 6 machine (Part 1).~~ Done 2026-10-19.
 3. ~~License, website field, screenshots.~~ Done 2026-10-23 (`docs/`; author email oss@zoltan.org as in the aquarium). Settings-page screenshots not taken.
-4. Tag, GitHub release, KDE Store listings.
+4. ~~Tag, GitHub release, KDE Store listings.~~ Done 2026-10-23: v0.2.0 on GitHub; one store listing with both files, uploaded by Erik: https://store.kde.org/p/2380181
